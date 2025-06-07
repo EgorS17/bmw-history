@@ -1,0 +1,87 @@
+body {
+    background-color: #0d1117;
+    color: #e6e6e6;
+    font-family: 'Segoe UI', sans-serif;
+}
+.navbar {
+    background-color: #161b22;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #58a6ff;
+}
+.card {
+    background-color: #161b22;
+    border: none;
+    color: #ccc;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: scale(1.03);
+}
+.img-wrapper {
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d1117;
+    border-bottom: 1px solid #222;
+}
+.card-img-top {
+    height: 100%;
+    width: auto;
+}
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.card-title {
+    color: #58a6ff;
+}
+a.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+.admin-buttons {
+    margin-top: 10px;
+}
+.admin-buttons .btn {
+    pointer-events: auto;
+}
+.navbar-brand:hover {
+    color: #ffffff !important;
+}
+.btn--subtle {
+    background: none;
+    color: #ffffff;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.btn--subtle:hover {
+    background-color: #ffffff;
+    color: #0d1117; /* чёрный */
+}
+
+/* Для кнопки "Удалить" */
+.btn--danger-subtle {
+    background: none;
+    color: #fcfcfc;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.btn--danger-subtle:hover {
+    background-color: #dc3545; /* Bootstrap-красный */
+    color: #ffffff;
+}

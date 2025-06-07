@@ -1,0 +1,117 @@
+body {
+    background-color: #0d1117;
+    color: #e6e6e6;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    background-color: #161b22;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #58a6ff;
+}
+.navbar-brand:hover {
+    color: #ffffff !important;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('assets/images/index2.jpg') no-repeat center center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    text-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+.section-title {
+    color: #58a6ff;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.feature-card {
+    background-color: #161b22;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    height: 100%;
+    text-decoration: none;
+    display: block;
+    color: #e6e6e6;
+}
+.feature-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(88, 166, 255, 0.3);
+    color: #58a6ff;
+}
+.feature-icon {
+    font-size: 3rem;
+    color: #58a6ff;
+    margin-bottom: 10px;
+}
+.feature-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.card {
+    background-color: #161b22 !important;
+    border: none !important;
+    color: #ccc !important;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: scale(1.02);
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #444;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+.card-text {
+    flex-grow: 1;
+}
+.btn-outline-primary {
+    color: #58a6ff;
+    border-color: #58a6ff;
+}
+.btn-outline-primary:hover {
+    background-color: #58a6ff;
+    color: #0d1117;
+}
+
+.card {
+    background-color: #161b22 !important;
+    color: #ccc !important;
+    border: none !important;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border-bottom: 1px solid #444;
+  }
+  
+  

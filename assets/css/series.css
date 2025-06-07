@@ -1,0 +1,154 @@
+body {
+    background-color: #0d1117;
+    color: #e6e6e6;
+    font-family: 'Segoe UI', sans-serif;
+}
+.navbar {
+    background-color: #161b22;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #58a6ff;
+}
+.card-title {
+    color: #58a6ff;
+}
+.btn-sm {
+    padding: 0.25rem 0.75rem;
+}
+
+.custom-card {
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 250px;
+    height: 100%;
+}
+
+.swiper {
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    transition: transform 0.4s ease;
+}
+
+.swiper-slide-active {
+    transform: scale(1.08);
+    z-index: 3;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #58a6ff;
+    border: 2px solid #58a6ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    background-color: rgba(13, 17, 23, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    top: calc(50% - 30px);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #58a6ff;
+    color: #0d1117;
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #58a6ff;
+}
+
+.swiper-slide .card {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    overflow: hidden;
+    border-radius: 0; /* убрано */
+}
+
+.swiper-slide .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    object-position: 50% 80%;
+    border-radius: 0; /* убрано */
+}
+
+/* Слайдер: плавность, масштаб активного */
+.swiper-slide {
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    opacity: 0.6;
+}
+
+.swiper-slide-active {
+    transform: scale(1.08);
+    opacity: 1;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+}
+
+.swiper-slide-active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(88, 166, 255, 0.35), transparent);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.navbar-brand:hover {
+    color: #ffffff !important;
+}
+
+.series-card {
+    cursor: pointer;
+}
+
+.series-card:hover {
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+.btn--subtle {
+    background: none;
+    color: #58a6ff;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+.btn--subtle:hover {
+    background-color: #1f6feb;
+    color: #ffffff;
+    border-color: #58a6ff;
+}
+.btn--subtle {
+    background: none;
+    color: #ffffff;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+.btn--subtle:hover {
+    background-color: #ffffff;
+    color: #0d1117;
+}
+
+.btn--danger-subtle {
+    background: none;
+    color: #ffffff;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+.btn--danger-subtle:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+}
