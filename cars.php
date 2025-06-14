@@ -100,8 +100,6 @@ $result = $stmt->get_result();
     </style>
 </head>
 <body>
-<!-- остальной HTML остаётся без изменений -->
-
 
 <nav class="navbar navbar-expand-lg">
     <div class="container">
@@ -118,6 +116,7 @@ $result = $stmt->get_result();
                 <a href="teams.php" class="btn btn--subtle">Команды</a>
                 <?php if ($isAdmin): ?>
                     <a href="logout.php" class="btn btn--danger-subtle">Выйти</a>
+                    <a href="add_car.php" class="btn btn--danger-subtle">Добавить авто</a>
                 <?php endif; ?>
             </div>
         </div>

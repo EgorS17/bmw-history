@@ -120,6 +120,7 @@ while ($row = $result->fetch_assoc()) {
                 <a href="teams.php" class="btn btn--subtle">Команды</a>
                 <?php if ($isAdmin): ?>
                     <a href="logout.php" class="btn btn--danger-subtle">Выйти</a>
+                    <a href="add_series.php" class="btn btn--danger-subtle">Добавить авто</a>
                 <?php endif; ?>
             </div>
         </div>

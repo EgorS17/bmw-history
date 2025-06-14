@@ -18,6 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isAdmin) {
         $stmt->execute();
     }
 
+    if (!empty($_POST['series_id'])) {
+        $series_id = (int)$_POST['series_id'];  
+        $stmt = $conn->prepare("INSERT INTO driver_series (driver_id, series_id) VALUES (?, ?)");
+        $stmt->bind_param("ii", $driver_id, $series_id);
+        $stmt->execute();
+    }
+
     if (isset($_POST['team_id'])) {
         $team_id = (int)$_POST['team_id'];
         $stmt = $conn->prepare("INSERT INTO driver_team (driver_id, team_id) VALUES (?, ?)");
@@ -62,6 +69,8 @@ $teams_result = $teams_stmt->get_result();
 
 $allCars = $conn->query("SELECT id, name FROM cars ORDER BY name");
 $allTeams = $conn->query("SELECT id, name FROM teams ORDER BY name");
+$allSeries = $conn->query("SELECT id, name FROM series ORDER BY name"); // ← ЭТОГО НЕ ХВАТАЛО
+
 
 // Флаги по национальности
 $flags = [
@@ -313,6 +322,22 @@ $flag = $flags[$driver['nationality']] ?? '';
                 </div>
                 <div class="col-md-3">
                     <button type="submit" class="btn btn-outline-success w-100">Добавить автомобиль</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="mb-5">
+            <h4 class="section-title">Добавить серию гонщику</h4>
+            <form method="POST" class="row g-3 align-items-center">
+                <div class="col-md-6">
+                    <select name="series_id" class="form-select">
+                        <?php while ($series = $allSeries->fetch_assoc()): ?>
+                            <option value="<?= $series['id'] ?>"><?= htmlspecialchars($series['name']) ?></option>
+                        <?php endwhile; ?>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-outline-success w-100">Добавить серию</button>
                 </div>
             </form>
         </div>
